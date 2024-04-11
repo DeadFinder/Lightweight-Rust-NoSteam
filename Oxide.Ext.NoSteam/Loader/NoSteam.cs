@@ -21,7 +21,7 @@ namespace Oxide.Ext.NoSteam.Loader
         {
             Output("[NoSteam Fork] Author: Kaidoz&DeadFinder" +
                 "\n Specially for charaling-plugins.ru" +
-                "\n Github: ");
+                "\n Github: github.com/DeadFinder/Lightweight-Rust-NoSteam");
 
             try
             {
