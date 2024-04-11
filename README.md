@@ -8,10 +8,32 @@ Discord: https://discord.gg/Tn3kzbE
 - VISA: 4279380632007755
 - BTC: 1DNEbR5Yk6a6NXDuQHB2XGAAjaqL8NXvUc
 
+| Donate to Kaidoz |
+|------------------|
+| - https://www.buymeacoffee.com/kaidoz          |
+| - https://boosty.to/kaidoz/single-payment/donation/29238            | 
+| - https://qiwi.com/n/KAIDOZ            | 
+| - VISA: 4279380632007755           | 
+| - BTC: 1DNEbR5Yk6a6NXDuQHB2XGAAjaqL8NXvUc | 
+
+
+| Donate to DeadFinder |
+|------------------|
+| - A DeadFinder not need donations xd          |
+
+
 ## 📝️ » Information
-- Check every player for fake steamid or other something(100% protection)
-- Have config file for change AppId
-- Nosteam players are not displayed in server list to avoid ban
+- All information you can find on original page of NoSteam (https://github.com/Kaidoz/Rust-NoSteam), what i'm changed:
+ 1. Removed useless code, like a spam in chat
+ 2. Removed configs (i'm dont like that and also not touched that at all time)
+ 3. (DANGEROUS!!!!) Removed disable of Rust+ on server, idk && idc for what this was made
+ 4. Changed SteamPlatform.BeginPlayerSession and added some accepts of connection like 
+ ```C#
+connection.authStatusSteam = "ok";
+connection.authStatusEAC = "ok";
+connection.authStatusNexus = "ok";
+connection.authStatusCentralizedBans = "ok";
+```
 
 ## 🔧 » Supported operating systems
 | System  | Status |
