@@ -2,12 +2,6 @@
 Discord: https://discord.gg/Tn3kzbE
 
 ## ⭐ » Donations
-- https://www.buymeacoffee.com/kaidoz
-- https://boosty.to/kaidoz/single-payment/donation/29238
-- https://qiwi.com/n/KAIDOZ
-- VISA: 4279380632007755
-- BTC: 1DNEbR5Yk6a6NXDuQHB2XGAAjaqL8NXvUc
-
 | Donate to Kaidoz |
 |------------------|
 | - https://www.buymeacoffee.com/kaidoz          |
@@ -23,7 +17,7 @@ Discord: https://discord.gg/Tn3kzbE
 
 
 ## 📝️ » Information
-- All information you can find on original page of NoSteam (https://github.com/Kaidoz/Rust-NoSteam), what i'm changed:
+All information you can find on original page of [NoSteam](https://github.com/Kaidoz/Rust-NoSteam), what i'm changed:
  1. Removed useless code, like a spam in chat
  2. Removed configs (i'm dont like that and also not touched that at all time)
  3. (DANGEROUS!!!!) Removed disable of Rust+ on server, idk && idc for what this was made
@@ -73,3 +67,4 @@ object OnBeginPlayerSession(Connection connection, bool isLicense)
 ## 🧶 » Credits
 
 [Harmony](https://github.com/pardeike/Harmony) patcher used in the project
+[Kaidoz](https://github.com/Kaidoz/Rust-NoSteam) for original of NoSteam
