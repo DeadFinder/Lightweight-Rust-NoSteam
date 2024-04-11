@@ -1,6 +1,4 @@
 # Rust-NoSteam
-Discord: https://discord.gg/Tn3kzbE
-
 ## ⭐ » Donations
 | Donate to Kaidoz |
 |------------------|
