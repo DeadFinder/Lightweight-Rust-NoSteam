@@ -55,176 +55,58 @@
     <Compile Include="Utils\Steam\Structures\Ticket.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="0Harmony, Version=1.2.0.1, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\oxide\0Harmony.dll</HintPath>
-    </Reference>
-    <Reference Include="Assembly-CSharp">
-      <HintPath>..\oxide\Assembly-CSharp.dll</HintPath>
-    </Reference>
-    <Reference Include="Assembly-CSharp-firstpass">
-      <HintPath>..\oxide\Assembly-CSharp-firstpass.dll</HintPath>
-    </Reference>
-    <Reference Include="Facepunch.BurstCloth">
-      <HintPath>..\oxide\Facepunch.BurstCloth.dll</HintPath>
-    </Reference>
-    <Reference Include="Facepunch.Console">
-      <HintPath>..\oxide\Facepunch.Console.dll</HintPath>
-    </Reference>
-    <Reference Include="Facepunch.Flexbox">
-      <HintPath>..\oxide\Facepunch.Flexbox.dll</HintPath>
-    </Reference>
-    <Reference Include="Facepunch.GoogleSheets">
-      <HintPath>..\oxide\Facepunch.GoogleSheets.dll</HintPath>
-    </Reference>
-    <Reference Include="Facepunch.Input">
-      <HintPath>..\oxide\Facepunch.Input.dll</HintPath>
-    </Reference>
-    <Reference Include="Facepunch.Network">
-      <HintPath>..\oxide\Facepunch.Network.dll</HintPath>
-    </Reference>
-    <Reference Include="Facepunch.Nexus">
-      <HintPath>..\oxide\Facepunch.Nexus.dll</HintPath>
-    </Reference>
-    <Reference Include="Facepunch.Raknet">
-      <HintPath>..\oxide\Facepunch.Raknet.dll</HintPath>
-    </Reference>
-    <Reference Include="Facepunch.Rcon">
-      <HintPath>..\oxide\Facepunch.Rcon.dll</HintPath>
-    </Reference>
-    <Reference Include="Facepunch.Skeleton">
-      <HintPath>..\oxide\Facepunch.Skeleton.dll</HintPath>
-    </Reference>
-    <Reference Include="Facepunch.Sqlite">
-      <HintPath>..\oxide\Facepunch.Sqlite.dll</HintPath>
-    </Reference>
-    <Reference Include="Facepunch.SteamNetworking">
-      <HintPath>..\oxide\Facepunch.SteamNetworking.dll</HintPath>
-    </Reference>
-    <Reference Include="Facepunch.Steamworks.Posix">
-      <HintPath>..\oxide\Facepunch.Steamworks.Posix.dll</HintPath>
-    </Reference>
-    <Reference Include="Facepunch.System">
-      <HintPath>..\oxide\Facepunch.System.dll</HintPath>
-    </Reference>
-    <Reference Include="Facepunch.Unity">
-      <HintPath>..\oxide\Facepunch.Unity.dll</HintPath>
-    </Reference>
-    <Reference Include="Facepunch.UnityEngine">
-      <HintPath>..\oxide\Facepunch.UnityEngine.dll</HintPath>
-    </Reference>
-    <Reference Include="Facepunch.UnwrapBaker.Settings">
-      <HintPath>..\oxide\Facepunch.UnwrapBaker.Settings.dll</HintPath>
-    </Reference>
-    <Reference Include="Mono.Cecil">
-      <HintPath>..\oxide\Mono.Cecil.dll</HintPath>
-    </Reference>
-    <Reference Include="Mono.Cecil.Mdb">
-      <HintPath>..\oxide\Mono.Cecil.Mdb.dll</HintPath>
-    </Reference>
-    <Reference Include="Mono.Cecil.Pdb">
-      <HintPath>..\oxide\Mono.Cecil.Pdb.dll</HintPath>
-    </Reference>
-    <Reference Include="Mono.Cecil.Rocks">
-      <HintPath>..\oxide\Mono.Cecil.Rocks.dll</HintPath>
-    </Reference>
-    <Reference Include="Mono.Data.Tds">
-      <HintPath>..\oxide\Mono.Data.Tds.dll</HintPath>
-    </Reference>
-    <Reference Include="MonoMod">
-      <HintPath>..\oxide\MonoMod.dll</HintPath>
-    </Reference>
-    <Reference Include="MonoMod.Backports">
-      <HintPath>..\oxide\MonoMod.Backports.dll</HintPath>
-    </Reference>
-    <Reference Include="MonoMod.Common">
-      <HintPath>..\oxide\MonoMod.Common.dll</HintPath>
-    </Reference>
-    <Reference Include="MonoMod.DebugIL">
-      <HintPath>..\oxide\MonoMod.DebugIL.dll</HintPath>
-    </Reference>
-    <Reference Include="MonoMod.RuntimeDetour">
-      <HintPath>..\oxide\MonoMod.RuntimeDetour.dll</HintPath>
-    </Reference>
-    <Reference Include="MonoMod.RuntimeDetour.HookGen">
-      <HintPath>..\oxide\MonoMod.RuntimeDetour.HookGen.dll</HintPath>
-    </Reference>
-    <Reference Include="MonoMod.UnitTest">
-      <HintPath>..\oxide\MonoMod.UnitTest.dll</HintPath>
-    </Reference>
-    <Reference Include="MonoMod.Utils">
-      <HintPath>..\oxide\MonoMod.Utils.dll</HintPath>
-    </Reference>
-    <Reference Include="MySql.Data">
-      <HintPath>..\oxide\MySql.Data.dll</HintPath>
-    </Reference>
-    <Reference Include="Oxide.Common">
-      <HintPath>..\oxide\Oxide.Common.dll</HintPath>
-    </Reference>
-    <Reference Include="Oxide.Core">
-      <HintPath>..\oxide\Oxide.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Oxide.CSharp">
-      <HintPath>..\oxide\Oxide.CSharp.dll</HintPath>
-    </Reference>
-    <Reference Include="Oxide.MySql">
-      <HintPath>..\oxide\Oxide.MySql.dll</HintPath>
-    </Reference>
-    <Reference Include="Oxide.References">
-      <HintPath>..\oxide\Oxide.References.dll</HintPath>
-    </Reference>
-    <Reference Include="Oxide.Rust">
-      <HintPath>..\oxide\Oxide.Rust.dll</HintPath>
-    </Reference>
-    <Reference Include="Oxide.SQLite">
-      <HintPath>..\oxide\Oxide.SQLite.dll</HintPath>
-    </Reference>
-    <Reference Include="Oxide.Unity">
-      <HintPath>..\oxide\Oxide.Unity.dll</HintPath>
-    </Reference>
-    <Reference Include="Rust.Clans.Local">
-      <HintPath>..\oxide\Rust.Clans.Local.dll</HintPath>
-    </Reference>
-    <Reference Include="Rust.Platform.Steam">
-      <HintPath>..\oxide\Rust.Platform.Steam.dll</HintPath>
-    </Reference>
-    <Reference Include="System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL" />
-    <Reference Include="System.Configuration.Install, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\oxide\System.Configuration.Install.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=AMD64">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\oxide\System.Data.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Data.SQLite">
-      <HintPath>..\oxide\System.Data.SQLite.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\oxide\System.Drawing.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\oxide\System.Runtime.Serialization.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Text.RegularExpressions, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Text.RegularExpressions.4.3.1\lib\net463\System.Text.RegularExpressions.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Transactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=AMD64">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\oxide\System.Transactions.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.CoreModule">
-      <HintPath>..\oxide\UnityEngine.CoreModule.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Oxide.Ext.NoSteam.dll" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony, Version=1.2.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\oxide\0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\oxide\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp-firstpass, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\oxide\Assembly-CSharp-firstpass.dll</HintPath>
+    </Reference>
+    <Reference Include="Facepunch.Console, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\oxide\Facepunch.Console.dll</HintPath>
+    </Reference>
+    <Reference Include="Facepunch.Network, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\oxide\Facepunch.Network.dll</HintPath>
+    </Reference>
+    <Reference Include="Facepunch.System, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\oxide\Facepunch.System.dll</HintPath>
+    </Reference>
+    <Reference Include="Facepunch.UnityEngine, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\oxide\Facepunch.UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="Oxide.Core, Version=2.0.4082.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\oxide\Oxide.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Rust.Platform.Steam, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\oxide\Rust.Platform.Steam.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Text.RegularExpressions, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.RegularExpressions.4.3.1\lib\net463\System.Text.RegularExpressions.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\oxide\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
