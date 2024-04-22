@@ -18,8 +18,9 @@ namespace Oxide.Ext.NoSteam.Patches
             }
         }
 
-        //Totally not understand why i'm should disable Rust+ on server, maybe i will get banned without that xd.
-        /*[HarmonyPatch(typeof(AppServer), nameof(AppServer.Initialize))]
+        //Now i'm understand why i should disable rust+, my server get deranked xd
+        //Also maybe i will add on connections check if player is pirate i will deny this connection
+        [HarmonyPatch(typeof(AppServer), nameof(AppServer.Initialize))]
         private static class CompanionServerPatch
         {
             [HarmonyPrefix]
@@ -28,6 +29,6 @@ namespace Oxide.Ext.NoSteam.Patches
                 ConVar.App.port = -1;
                 return false;
             }
-        }*/
+        }
     }
 }

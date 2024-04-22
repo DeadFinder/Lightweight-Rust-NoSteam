@@ -17,7 +17,7 @@ namespace Oxide.Ext.NoSteam.Patches
 
             OnAuthenticatedRemote = typeof(EACServer).GetMethod("OnAuthenticatedRemote", BindingFlags.Static | BindingFlags.NonPublic);
         }
-
+        
         [HarmonyPatch(typeof(EACServer), nameof(EACServer.OnJoinGame))]
         private static class Patch01
         {
