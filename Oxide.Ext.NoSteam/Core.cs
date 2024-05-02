@@ -1,4 +1,4 @@
-﻿using Harmony;
+﻿using HarmonyLib;
 using Network;
 using Oxide.Ext.NoSteam.Patches;
 using Oxide.Ext.NoSteam.Utils;
@@ -17,7 +17,7 @@ namespace Oxide.Ext.NoSteam
             StatusPlayers = new Dictionary<ulong, BeginAuthResult>();
         }
 
-        internal static HarmonyInstance HarmonyInstance;
+        internal static Harmony HarmonyInstance;
 
         internal static readonly Dictionary<ulong, BeginAuthResult> StatusPlayers;
 
@@ -30,8 +30,8 @@ namespace Oxide.Ext.NoSteam
 
         private static void DoPatch()
         {
-            HarmonyInstance = HarmonyInstance.Create("com.github.rust.exp");
-            HarmonyInstance.DEBUG = false;
+            HarmonyInstance = new Harmony("com.github.rust.exp");
+            Harmony.DEBUG = false;
             HarmonyInstance.PatchAll();
         }
 
