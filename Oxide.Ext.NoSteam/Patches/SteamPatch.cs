@@ -171,20 +171,20 @@ namespace Oxide.Ext.NoSteam.Patches
         internal static class SteamPlatformBeginPlayer2
         {
             [HarmonyPostfix]
-            public static void HarmonyPostfix(IntPtr pAuthTicket, int cbAuthTicket, SteamId steamID, ref BeginAuthResult __result)
+            public static void HarmonyPostfix(IntPtr pAuthTicket, int cbAuthTicket, SteamId steamID) // ref BeginAuthResult __result
             {
                 if (NoSteamExtension.DEBUG)
                 {
-                    Logger.Print("SteamPlatformBeginPlayer2: " + steamID + " " + __result);
+                    Logger.Print("SteamPlatformBeginPlayer2: " + steamID + " " + 0);
                 }
 
                 if (StatusPlayers.ContainsKey(steamID) == false)
                 {
-                    StatusPlayers.Add(steamID, __result);
+                    StatusPlayers.Add(steamID, 0);
                 }
                 else
                 {
-                    StatusPlayers[steamID] = __result;
+                    StatusPlayers[steamID] = 0;
                 }
             }
         }
