@@ -18,7 +18,7 @@
 All information you can find on original page of [NoSteam](https://github.com/Kaidoz/Rust-NoSteam), what i'm changed:
  1. Removed useless code, like a spam in chat
  2. Removed configs (i'm dont like that and also not touched that at all time)
- 3. (DANGEROUS!!!!) Removed disable of Rust+ on server, idk && idc for what this was made
+ 3. ~~(DANGEROUS!!!!) Removed disable of Rust+ on server, idk && idc for what this was made~~
  4. Changed SteamPlatform.BeginPlayerSession and added some accepts of connection like 
  ```C#
 connection.authStatusSteam = "ok";
