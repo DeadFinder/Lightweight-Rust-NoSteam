@@ -17,7 +17,7 @@ namespace Oxide.Ext.NoSteam.Patches
     internal static class SteamPatch
     {
 
-        private static Dictionary<ulong, BeginAuthResult> StatusPlayers => Core.StatusPlayers;
+        private static Dictionary<ulong, int> StatusPlayers => Core.StatusPlayers;
 
         internal static void PatchSteamBeginPlayer()
         {

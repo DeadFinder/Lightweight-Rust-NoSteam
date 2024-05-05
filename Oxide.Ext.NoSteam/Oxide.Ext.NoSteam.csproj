@@ -34,7 +34,6 @@
   <ItemGroup>
     <Compile Include="Core.cs" />
     <Compile Include="Loader\NoSteam.cs" />
-    <Compile Include="MessageService\Messages.cs" />
     <Compile Include="NoSteamExtension.cs" />
     <Compile Include="Patches\CommandLinePatch.cs" />
     <Compile Include="Patches\EacPatch.cs" />
@@ -48,7 +47,6 @@
     <Compile Include="Utils\Steam\Convertor.cs" />
     <Compile Include="Utils\Steam\SteamTicket.cs" />
     <Compile Include="Utils\Steam\Steamworks\AuthResponse.cs" />
-    <Compile Include="Utils\Steam\Steamworks\BeginAuthResult.cs" />
     <Compile Include="Utils\Steam\Steamworks\SteamId.cs" />
     <Compile Include="Utils\Steam\Structures\SteamSession.cs" />
     <Compile Include="Utils\Steam\Structures\SteamTokendata.cs" />

@@ -18,8 +18,7 @@ namespace Oxide.Ext.NoSteam.Patches
             }
         }
 
-        //Now i'm understand why i should disable rust+, my server get deranked xd
-        //Also maybe i will add on connections check if player is pirate i will deny this connection
+        //Server can get deranked because of enabled Rust+
         [HarmonyPatch(typeof(AppServer), nameof(AppServer.Initialize))]
         private static class CompanionServerPatch
         {
