@@ -18,13 +18,12 @@
 All information you can find on original page of [NoSteam](https://github.com/Kaidoz/Rust-NoSteam), what i'm changed:
  1. Removed useless code, like a spam in chat
  2. Removed configs (i'm dont like that and also not touched that at all time)
- 3. ~~(DANGEROUS!!!!) Removed disable of Rust+ on server, idk && idc for what this was made~~
- 4. Changed SteamPlatform.BeginPlayerSession and added some accepts of connection like 
- 5. Changed to Harmony 3 with 2024 Rust May update.
+ 3. Removed disable of Rust+ on server, now steam players can pair rust+ but pirate players have no chance to do that.
+ 4. Changed SteamPlatform.BeginPlayerSession and added some accepts of connection like
  ```C#
-List<string> authStatus = new List<string> { connection.authStatusSteam, connection.authStatusEAC, connection.authStatusNexus, connection.authStatusCentralizedBans };
-authStatus.ForEach(x => x = "ok");
-```
+connection.authStatusSteam, connection.authStatusEAC, connection.authStatusNexus, connection.authStatusCentralizedBans
+ ```
+ 6. Changed to Harmony 3 with 2024 Rust May update.
 
 ## 🔧 » Supported operating systems
 | System  | Status |
