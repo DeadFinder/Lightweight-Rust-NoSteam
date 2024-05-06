@@ -23,7 +23,7 @@ All information you can find on original page of [NoSteam](https://github.com/Ka
  ```C#
 connection.authStatusSteam, connection.authStatusEAC, connection.authStatusNexus, connection.authStatusCentralizedBans
  ```
- 6. Changed to Harmony 3 with 2024 Rust May update.
+ 5. Changed to Harmony 3 with 2024 Rust May update.
 
 ## 🔧 » Supported operating systems
 | System  | Status |
