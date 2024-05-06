@@ -3,8 +3,8 @@ using HarmonyLib;
 using Oxide.Core;
 using Oxide.Ext.NoSteam.Utils;
 using Oxide.Ext.NoSteam.Utils.Steam;
-using Oxide.Ext.NoSteam.Utils.Steam.Steamworks;
 using Rust.Platform.Steam;
+using Steamworks;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +17,7 @@ namespace Oxide.Ext.NoSteam.Patches
     internal static class SteamPatch
     {
 
-        private static Dictionary<ulong, int> StatusPlayers => Core.StatusPlayers;
+        private static Dictionary<ulong, BeginAuthResult> StatusPlayers => Core.StatusPlayers;
 
         internal static void PatchSteamBeginPlayer()
         {
@@ -98,7 +98,6 @@ namespace Oxide.Ext.NoSteam.Patches
             public static bool Prefix(ulong steamid, ulong ownerSteamID, AuthResponse response, ref bool __result)
             {
                 __result = true;
-
                 return false;
             }
         }
@@ -131,36 +130,37 @@ namespace Oxide.Ext.NoSteam.Patches
 
                 var ticket = new SteamTicket(authToken);
 
-                if (Core.CheckIsValidConnection(userId, ticket) == false)
+                if (!Core.CheckIsValidConnection(userId, ticket))
                 {
                     __result = false;
 
                     if (NoSteamExtension.DEBUG)
-                    {
                         Logger.Print("CheckIsValidConnection: " + userId);
-                    }
 
                     return;
                 }
 
-                bool IsLicense = ticket.clientVersion == SteamTicket.ClientVersion.Steam;
+                bool IsLicense = (ticket.clientVersion == SteamTicket.ClientVersion.Steam);
 
                 var connections = ConnectionAuth.m_AuthConnection;
                 var connection = connections.First(x => x.userid == userId);
 
-                connection.authStatusSteam = "ok";
+                List<string> authStatus = new List<string> { connection.authStatusSteam, connection.authStatusEAC, connection.authStatusNexus, connection.authStatusCentralizedBans };
+                authStatus.ForEach(x => x = "ok");
+                /*connection.authStatusSteam = "ok";
                 connection.authStatusEAC = "ok";
                 connection.authStatusNexus = "ok";
-                connection.authStatusCentralizedBans = "ok";
+                connection.authStatusCentralizedBans = "ok";*/
 
                 __result = true;
 
                 object reason = Interface.CallHook("OnBeginPlayerSession", connection, IsLicense);
 
                 if (reason == null)
-                {
                     return;
-                }
+
+                if (NoSteamExtension.DEBUG)
+                    Logger.Print("SteamPlatformBeginPlayer: " + userId + " " + reason.ToString());
 
                 ConnectionAuth.Reject(connection, reason.ToString(), null);
 
@@ -171,21 +171,17 @@ namespace Oxide.Ext.NoSteam.Patches
         internal static class SteamPlatformBeginPlayer2
         {
             [HarmonyPostfix]
-            public static void HarmonyPostfix(IntPtr pAuthTicket, int cbAuthTicket, SteamId steamID) // ref BeginAuthResult __result
+            public static void HarmonyPostfix(IntPtr pAuthTicket, int cbAuthTicket, SteamId steamID, ref BeginAuthResult __result) // ref BeginAuthResult __result
             {
                 if (NoSteamExtension.DEBUG)
-                {
-                    Logger.Print("SteamPlatformBeginPlayer2: " + steamID + " " + 0);
-                }
+                    Logger.Print("SteamPlatformBeginPlayer2: " + steamID + " " + __result);
 
-                if (StatusPlayers.ContainsKey(steamID) == false)
+                if (!StatusPlayers.ContainsKey(steamID))
                 {
-                    StatusPlayers.Add(steamID, 0);
+                    StatusPlayers.Add(steamID, __result);
+                    return;
                 }
-                else
-                {
-                    StatusPlayers[steamID] = 0;
-                }
+                StatusPlayers[steamID] = __result;
             }
         }
 

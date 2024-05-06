@@ -46,8 +46,6 @@
     <Compile Include="Utils\SteamworksAssemblyLoader.cs" />
     <Compile Include="Utils\Steam\Convertor.cs" />
     <Compile Include="Utils\Steam\SteamTicket.cs" />
-    <Compile Include="Utils\Steam\Steamworks\AuthResponse.cs" />
-    <Compile Include="Utils\Steam\Steamworks\SteamId.cs" />
     <Compile Include="Utils\Steam\Structures\SteamSession.cs" />
     <Compile Include="Utils\Steam\Structures\SteamTokendata.cs" />
     <Compile Include="Utils\Steam\Structures\Ticket.cs" />
@@ -60,7 +58,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="0Harmony, Version=1.2.0.1, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="0Harmony, Version=2.3.1.1, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\oxide\0Harmony.dll</HintPath>
     </Reference>
@@ -79,6 +77,9 @@
     <Reference Include="Facepunch.Network, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\oxide\Facepunch.Network.dll</HintPath>
+    </Reference>
+    <Reference Include="Facepunch.Steamworks.Posix">
+      <HintPath>..\oxide\Facepunch.Steamworks.Posix.dll</HintPath>
     </Reference>
     <Reference Include="Facepunch.System, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -106,5 +107,6 @@
       <HintPath>..\oxide\UnityEngine.CoreModule.dll</HintPath>
     </Reference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

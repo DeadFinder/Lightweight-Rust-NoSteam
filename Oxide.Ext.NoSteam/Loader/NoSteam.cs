@@ -20,7 +20,7 @@ namespace Oxide.Ext.NoSteam.Loader
         internal static void InitPlugin()
         {
             Output("[NoSteam Fork] Author: Kaidoz&DeadFinder" +
-                "\n Specially for charaling-plugins.ru" +
+                "\n Specially for rustalpha.tech" +
                 "\n Github: github.com/DeadFinder/Lightweight-Rust-NoSteam");
 
             try

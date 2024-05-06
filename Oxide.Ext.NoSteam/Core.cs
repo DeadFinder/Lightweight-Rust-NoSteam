@@ -3,9 +3,10 @@ using Network;
 using Oxide.Ext.NoSteam.Patches;
 using Oxide.Ext.NoSteam.Utils;
 using Oxide.Ext.NoSteam.Utils.Steam;
-using Oxide.Ext.NoSteam.Utils.Steam.Steamworks;
+using Steamworks;
 using System.Collections.Generic;
 using System.Reflection;
+using static ServerUsers;
 
 
 namespace Oxide.Ext.NoSteam
@@ -14,12 +15,12 @@ namespace Oxide.Ext.NoSteam
     {
         static Core()
         {
-            StatusPlayers = new Dictionary<ulong, int>();
+            StatusPlayers = new Dictionary<ulong, BeginAuthResult>();
         }
 
         internal static Harmony HarmonyInstance;
 
-        internal static readonly Dictionary<ulong, int> StatusPlayers;
+        internal static readonly Dictionary<ulong, BeginAuthResult> StatusPlayers;
 
         internal static void Start()
         {
@@ -88,21 +89,34 @@ namespace Oxide.Ext.NoSteam
         internal static bool CheckIsValidConnection(ulong userid, SteamTicket steamTicket)
         {
             if (StatusPlayers.ContainsKey(userid) == false)
+            {
+                if (NoSteamExtension.DEBUG)
+                    Logger.Print("CheckIsValidConnection[1] | StatusPlayers not contains: " + userid);
                 return false;
+            }
 
             bool authResult = false;
             switch (StatusPlayers[userid])
             {
-                case 0:
+                case BeginAuthResult.OK:
+                case BeginAuthResult.GameMismatch:
                     authResult = true;
                     break;
             }
 
             if (authResult == false)
+            {
+                if (NoSteamExtension.DEBUG)
+                    Logger.Print("CheckIsValidConnection[2] | AuthResult false: " + userid + " Status: " + StatusPlayers[userid].ToString());
                 return false;
+            }
 
             if (steamTicket.Ticket.SteamID != userid)
+            {
+                if (NoSteamExtension.DEBUG)
+                    Logger.Print("CheckIsValidConnection[3] | steamTicket.SteamID != userid: " + userid);
                 return false;
+            }
 
             return true;
         }
