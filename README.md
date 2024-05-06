@@ -20,11 +20,10 @@ All information you can find on original page of [NoSteam](https://github.com/Ka
  2. Removed configs (i'm dont like that and also not touched that at all time)
  3. ~~(DANGEROUS!!!!) Removed disable of Rust+ on server, idk && idc for what this was made~~
  4. Changed SteamPlatform.BeginPlayerSession and added some accepts of connection like 
+ 5. Changed to Harmony 3 with 2024 Rust May update.
  ```C#
-connection.authStatusSteam = "ok";
-connection.authStatusEAC = "ok";
-connection.authStatusNexus = "ok";
-connection.authStatusCentralizedBans = "ok";
+List<string> authStatus = new List<string> { connection.authStatusSteam, connection.authStatusEAC, connection.authStatusNexus, connection.authStatusCentralizedBans };
+authStatus.ForEach(x => x = "ok");
 ```
 
 ## 🔧 » Supported operating systems
@@ -65,4 +64,5 @@ object OnBeginPlayerSession(Connection connection, bool isLicense)
 ## 🧶 » Credits
 
 [Harmony](https://github.com/pardeike/Harmony) patcher used in the project
+
 [Kaidoz](https://github.com/Kaidoz/Rust-NoSteam) for original of NoSteam
