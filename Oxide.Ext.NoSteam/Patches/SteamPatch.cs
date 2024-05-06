@@ -145,12 +145,12 @@ namespace Oxide.Ext.NoSteam.Patches
                 var connections = ConnectionAuth.m_AuthConnection;
                 var connection = connections.First(x => x.userid == userId);
 
-                List<string> authStatus = new List<string> { connection.authStatusSteam, connection.authStatusEAC, connection.authStatusNexus, connection.authStatusCentralizedBans };
-                authStatus.ForEach(x => x = "ok");
-                /*connection.authStatusSteam = "ok";
+                //List<string> authStatus = new List<string> { connection.authStatusSteam, connection.authStatusEAC, connection.authStatusNexus, connection.authStatusCentralizedBans };
+                //authStatus.ForEach(x => x = "ok");
+                connection.authStatusSteam = "ok";
                 connection.authStatusEAC = "ok";
                 connection.authStatusNexus = "ok";
-                connection.authStatusCentralizedBans = "ok";*/
+                connection.authStatusCentralizedBans = "ok";
 
                 __result = true;
 
