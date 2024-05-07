@@ -85,13 +85,22 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\oxide\Facepunch.System.dll</HintPath>
     </Reference>
+    <Reference Include="Facepunch.Unity">
+      <HintPath>..\oxide\Facepunch.Unity.dll</HintPath>
+    </Reference>
     <Reference Include="Facepunch.UnityEngine, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\oxide\Facepunch.UnityEngine.dll</HintPath>
     </Reference>
+    <Reference Include="Fleck">
+      <HintPath>..\oxide\Fleck.dll</HintPath>
+    </Reference>
     <Reference Include="Oxide.Core, Version=2.0.4082.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\oxide\Oxide.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Rust.Data">
+      <HintPath>..\oxide\Rust.Data.dll</HintPath>
     </Reference>
     <Reference Include="Rust.Platform.Steam, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>

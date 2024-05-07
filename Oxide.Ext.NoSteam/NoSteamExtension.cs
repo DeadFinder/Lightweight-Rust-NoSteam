@@ -19,7 +19,7 @@ namespace Oxide.Ext.NoSteam
     {
         private bool _loaded;
 
-        public static bool DEBUG = true;
+        public static bool DEBUG = false;
 
         public NoSteamExtension(ExtensionManager manager) : base(manager)
         {
