@@ -1,14 +1,7 @@
 ﻿using CompanionServer;
 using HarmonyLib;
 using System.Threading.Tasks;
-using Listener = CompanionServer.Listener;
 using Pair = CompanionServer.Util;
-using Fleck;
-using static SkinnedMultiMesh;
-using System.Collections.Generic;
-using System.Net;
-using System.Threading;
-using System;
 namespace Oxide.Ext.NoSteam.Patches
 {
     internal static class OtherPatch
